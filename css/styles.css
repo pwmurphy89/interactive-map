@@ -1,0 +1,68 @@
+.red{
+	fill: #BA3A33;
+	color: #BA3A33;
+}
+
+.blue {
+	fill: #445E96;
+	color: #445E96;
+
+}
+
+.open{
+	fill: #c2b280;
+	color: #c2b280;
+}
+#map-wrapper{
+	position: relative;
+	width:750px;
+	margin: auto;
+}
+#wrapper svg{
+	background-color: black;
+}
+
+.state-info{
+	color: white;
+	font-weight: bold;
+	font-size: 12px;
+
+}
+#vote-bar-wrap{
+	overflow: hidden;
+	position: relative;
+	top: 0;
+	left: 0;
+	width: 750px;
+	margin: auto;
+	text-align: center;
+
+}
+#vote-bar-wrap .red{
+	float: right;
+}
+#vote-bar-wrap .blue{
+	float: left;
+}
+#color-bar {
+	clear: both;
+}
+.bar {
+	height: 20px;
+}
+#blue-bar{
+	background-color: #445E96;
+	float: left;
+}
+#red-bar{
+	background-color: #BA3A33;
+	float: left;
+}
+#open-bar{
+	background-color: #c2b280;
+	float: left;
+}
+
+#small {
+	height: 20px;
+}
