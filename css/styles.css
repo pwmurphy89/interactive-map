@@ -1,3 +1,18 @@
+body{
+	background-color: black;
+}
+
+#smallVotes {
+	font-size: 18px;
+}
+table{
+	position: absolute;
+	top: 300px;
+	left: 650px;
+	color: white;
+	float: right;
+}
+
 .red{
 	fill: #BA3A33;
 	color: #BA3A33;
@@ -17,6 +32,7 @@
 	position: relative;
 	width:750px;
 	margin: auto;
+	color: white;
 }
 #wrapper svg{
 	background-color: black;

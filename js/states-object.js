@@ -85,13 +85,11 @@ function resetStates(){
         }else{
         	openStates[states[i].id] = states[i];
         }
-        if(states[i].isSmall){
-            smallStates[states[i].id] = states[i];
-        }
-        }
 
-    // console.log(states);
-    
+      }
+
+
+ 
     numStates = states.length;
 
 }

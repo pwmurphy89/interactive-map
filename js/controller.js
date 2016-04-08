@@ -3,12 +3,23 @@ interactiveMap.controller("interactiveMapCtrl",function($scope){
 	resetStates();
 	$scope.states=states;
 	calculateStateTotals();
-	$scope.smallStates= smallStates;
-	console.log($scope.smallStates);
+	console.log($scope.states);
+	// $scope.smallStates= smallStates;
+	// for(var i = 0; i<states.length;i++){
+	// 	if (states[i].isSmall){
+	// 		console.log(states[i].abbr);
+
+	// 	}
+	// }
+	// console.log($scope.smallStates);
+	// for(var i = 0; i < smallStates.length; i++){
+	// 	$scope.smallStates[i].name;
+	// }
 
 
 
 	$scope.stateClicked = function(state){
+
 		var newColor = getNewColor(state);
 
 
@@ -18,6 +29,8 @@ interactiveMap.controller("interactiveMapCtrl",function($scope){
 
 		if(state.stateColor === "red"){
 			state.stateColor = "blue";
+			
+			// document.getElementbyClassNames("smallVotes").style.color="blue";
 			$scope.blueStateVotes += state.electoralVotes;
 			$scope.redStateVotes -= state.electoralVotes;
 
