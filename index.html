@@ -33,11 +33,17 @@
 	<div id="main-wrapper">
 		<div id="map-wrapper">	
 			<svg width="750" height="500">
-				<g ng-click="stateClicked(state)" ng-repeat="state in states">
+				<g ng-click="stateClicked(state)" ng-repeat="state in states | filter: isSmall = false">
 					<path class="state {{state.stateColor}}" ng-attr-d="{{state.vector}}" stroke="white"></path>
+					
 					<foreignObject ng-attr-x="{{state.nameX}}" ng-attr-y="{{state.nameY}}">
-						<div ng-class="state-info">{{state.abbr}}<br>{{state.electoralVotes}}</div>
+						<div class="state-info">{{state.abbr}}<br>{{state.electoralVotes}}</div>
 					</foreignObject>
+
+				</g>
+
+				<g ng-repeat="state in states| filter: isSmall = true" ng-click="stateClicked(state)">
+					<path class="state {{state.stateColor}}" ng-attr-d="{{state.vector}}" stroke="white"></path>
 					<table>
 						<tr ng-repeat="state in states| filter: isSmall = true" ng-click="stateClicked(state)">
 							<td>{{state.name}}</td>
