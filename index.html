@@ -10,10 +10,11 @@
 
 </head>
 <body ng-controller="interactiveMapCtrl">
+	<div id="header">
+		<h1>Interactive Electoral Map</h1>
+	</div>
 	<div id="wrapper">
 		<div id="vote-bar-wrap">
-			<div class="arrow top"></div>
-			<div class="arrow bottom"></div>
 			<div class="blue">Democrats</div>
 			<div class="red">Republicans</div>
 			<div id="color-bar">
@@ -21,27 +22,21 @@
 				<div id="open-bar" class="bar open-bar" ng-style="{'width':openWidth}">{{openStateVotes}}</div>
 				<div id="red-bar" class="bar red-bar" ng-style="{'width':redWidth}">{{redStateVotes}}</div>
 			</div>
+			<div id="reset">
+				<button class="reset" ng-click="resetStates()">Reset Map</button>
+			</div>
 		</div>
-<!-- 		<div ng-repeat="state in smallStates">
+	</div>
 
-			{{state.abbr}}<br>{{state.electoralVotes}}
-	
-		</div>
- -->
-
-		</div>
 	<div id="main-wrapper">
 		<div id="map-wrapper">	
 			<svg width="750" height="500">
 				<g ng-click="stateClicked(state)" ng-repeat="state in states | filter: isSmall = false">
 					<path class="state {{state.stateColor}}" ng-attr-d="{{state.vector}}" stroke="white"></path>
-					
 					<foreignObject ng-attr-x="{{state.nameX}}" ng-attr-y="{{state.nameY}}">
 						<div class="state-info">{{state.abbr}}<br>{{state.electoralVotes}}</div>
 					</foreignObject>
-
 				</g>
-
 				<g ng-repeat="state in states| filter: isSmall = true" ng-click="stateClicked(state)">
 					<path class="state {{state.stateColor}}" ng-attr-d="{{state.vector}}" stroke="white"></path>
 					<table>
@@ -53,15 +48,9 @@
 				</g>
 			</svg>
 		</div>
-
-
-
 	</div>
 
+	<li ng-repeat="state in states">{{state.name}}</li>
 
-	<li ng-repeat="state in states">
-	{{state.name}}
-	</li>
-	
 </body>
 </html>

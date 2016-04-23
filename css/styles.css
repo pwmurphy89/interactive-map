@@ -1,9 +1,9 @@
 body{
 	background-color: black;
 }
-
-#smallVotes {
-	font-size: 18px;
+h1{
+	color:white;
+	text-align: center;
 }
 table{
 	position: absolute;
@@ -12,18 +12,14 @@ table{
 	color: white;
 	float: right;
 }
-
 .red{
 	fill: #BA3A33;
 	color: #BA3A33;
 }
-
 .blue {
 	fill: #445E96;
 	color: #445E96;
-
 }
-
 .open{
 	fill: #c2b280;
 	color: #c2b280;
@@ -37,12 +33,10 @@ table{
 #wrapper svg{
 	background-color: black;
 }
-
 .state-info{
 	color: white;
 	font-weight: bold;
 	font-size: 12px;
-
 }
 #vote-bar-wrap{
 	overflow: hidden;
@@ -52,7 +46,6 @@ table{
 	width: 750px;
 	margin: auto;
 	text-align: center;
-
 }
 #vote-bar-wrap .red{
 	float: right;
@@ -78,7 +71,11 @@ table{
 	background-color: #c2b280;
 	float: left;
 }
-
 #small {
 	height: 20px;
+}
+
+#reset {
+	float:right;
+	color:white;
 }
