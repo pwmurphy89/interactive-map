@@ -22,8 +22,16 @@
 				<div id="open-bar" class="bar open-bar" ng-style="{'width':openWidth}">{{openStateVotes}}</div>
 				<div id="red-bar" class="bar red-bar" ng-style="{'width':redWidth}">{{redStateVotes}}</div>
 			</div>
-			<div id="reset">
-				<button class="reset" ng-click="resetStates()">Reset Map</button>
+			<div class="row" id="info">
+				<div id="reset">
+					<button class="reset" ng-click="resetStates()">Reset Map</button>
+				</div>
+				<div class='neededVotes'>
+				The Democrats need {{neededBlueVotes}} to win.
+				</div>
+				<div class="neededVotes">
+				The Rupublicans need {{neededRedVotes}} to win.
+				</div>
 			</div>
 		</div>
 	</div>
