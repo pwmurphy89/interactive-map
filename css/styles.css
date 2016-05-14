@@ -1,9 +1,14 @@
 body{
 	background-color: black;
 }
-h1, h3{
+h1{
 	color:white;
 	text-align: center;
+}
+h3{
+	color:white;
+	text-align: center;
+	margin-top: -15px;
 }
 table{
 	position: absolute;
@@ -78,6 +83,11 @@ table{
 #reset {
 	float:right;
 	color:white;
+}
+.reset {
+	width: 90px;
+    font-size: 14px;
+    height: 30px;
 }
 .neededVotes {
 	color: white;
